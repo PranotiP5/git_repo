@@ -1,0 +1,18 @@
+1. git init
+to initiate git and create repository. type everytime before you start using git.
+
+2. git add <filename>
+to add file on git working directory
+
+3. git unstage HEAD <filename>
+to remove file from working directory
+
+4. git status
+to check status of git. shows files remaining to be commited.
+
+5. git commit -m "message"
+to move files from working directory to repository.
+
+
+
+
