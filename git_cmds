@@ -1,11 +1,13 @@
+git resource : https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases
+
 1. git init
 to initiate git and create repository. type everytime before you start using git.
 
 2. git add <filename>
-to add file on git working directory
+to add file on git staging area
 
-3. git unstage HEAD <filename>
-to remove file from working directory
+3. git reset HEAD <filename>
+to remove file from staging area
 
 4. git status
 to check status of git. shows files remaining to be commited.
