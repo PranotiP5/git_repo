@@ -1,20 +1,172 @@
-git resource : https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases
+git resource : https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases               book
+https://www.freecodecamp.org/news/10-important-git-commands-that-every-developer-should-know/
 
-1. git init
+https://www.tutorialspoint.com/git/git_managing_branches.htm    use this .. use quick guide on this page
+
+ 1. git init <project name>
 to initiate git and create repository. type everytime before you start using git.
 
 2. git add <filename>
 to add file on git staging area
 
 3. git reset HEAD <filename>
-to remove file from staging area
+to remove file from staging area, revert works the same way
+--soft -  it will reset/undo the last commit. this is same as git commit --amend
 
+git reset --hard HEAD~  will update the working directory and make it same as staging area and repository .
+goes back to last commit. do not keep anything in staging area or uncommitted work. 
+
+git merge -Xignore-space-change <branch name>
+ignore white spaces
+
+ git reset --staged file 
+to unstage. to remove file from staging area after git add file
+
+git reset sha1
+git reset branch
+
+
+git reset eb43bf file.txt
+
+use checkout instead of reset
 4. git status
 to check status of git. shows files remaining to be commited.
 
 5. git commit -m "message"
 to move files from working directory to repository.
 
+6. git pull <remote>
+pull files from remote server
+
+7. git log
+git log --oneline --graph --decorate
+get log of the changes done. it shows the messages written during commit
+
+8. git clone <https://name-of-the-repository-link>
+clones the repositroty. basically creates folder of the repository on the local machine
+
+9. merge
+ For example, when you want to merge your feature branch into the dev branch:
+
+git merge --abort 
+
+aborts the merge, undo the merge
+
+First you should switch to the dev branch:
+
+                   git checkout dev
+
+Before merging, you should update your local dev branch:
+
+                   git fetch
+
+Finally, first go to master branch. git check out master then you can merge your feature branch into dev:
+
+                   git checkout master
+                   git merge feature
+10. git branch <branchname>
+
+creates branch with branch name
+
+delete branch by
+                      git branch -d <branch name>
+
+11. checkout
+go to a branch
+                      git checkout <branchname>
+
+12.
+git config --global email "pranoti@pranoti-Inspiron-5567.(none)"
+git config --list
 
 
+13. git show <log number of commit ie SHA1>
 
+14. git rm file_name
+use git commands to remove file
+
+15. git tag <tagname> <commitid>
+
+16. git stash
+creates stash
+
+16 a. git stash pop
+bring the data from stash to master branch
+git stash branch <branch name>
+17. fetch,pull, clone
+
+18. git remote show origin
+git remote rename pb paul
+$ git remote
+origin
+paul
+
+19  git log --oneline --decorate
+--graph --all
+git remote remove paul
+$ git remote
+origin
+
+20.
+git config --global credential.helper cache
+
+21. git fetch
+difference between git fetch and pull is that git fetch just fetches data while pull will fetch as well merge data. better to use fetch plus merge
+
+22. rebase
+
+first go to the branch , then rebase the changes of the branch onto the master branch. then go to master branch and merge branch1
+
+git checkout branch1
+git rebase master
+
+git checkout master
+git merge branch1
+
+23. tree
+
+24. git ls-files
+
+++++++++++to push from machine to git hub repository++++++++++++++++++++++++++++++++++++++++++++++
+echo "# git_repo" >> README.md or touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/PranotiP5/git_repo.git
+git push -u origin main
+
+git pull origin
+git fetch origin      to fetch whats not on local machine
+
+
+git log
+git log --oneline
+git log -n 2                    last two commits
+
+
+git revert <log number of commit>
+
+git clone <https://name-of-the-repository-link>
+
+git rm file.txt
+
+
+git tag 
+to list all tags
+
+git tag ver1 <commit id>
+change file a.txt, add, commit
+git tag ver2 <commit id>
+
+git diff ver1
+gives the changes in ver1
+
+git diff ver2 
+gives nothing
+
+git tag -d <tagname>
+deletes tag
+
+
+i have problems with git diff git revert, reset, rebase with merge, stash, fetch, merge conflict, merge pull request on git hub while trying git push from local machine
